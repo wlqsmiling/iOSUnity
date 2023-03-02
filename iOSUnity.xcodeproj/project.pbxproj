@@ -16,6 +16,9 @@
 		04B227C029B0814C0014C7C0 /* iOSUnityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B227BF29B0814C0014C7C0 /* iOSUnityTests.swift */; };
 		04B227CA29B0814C0014C7C0 /* iOSUnityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B227C929B0814C0014C7C0 /* iOSUnityUITests.swift */; };
 		04B227CC29B0814C0014C7C0 /* iOSUnityUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B227CB29B0814C0014C7C0 /* iOSUnityUITestsLaunchTests.swift */; };
+		04B2281F29B08CB80014C7C0 /* UnityFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B2281E29B08CB70014C7C0 /* UnityFramework.framework */; };
+		04B2282029B08CB80014C7C0 /* UnityFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04B2281E29B08CB70014C7C0 /* UnityFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04B2282629B08CFE0014C7C0 /* UnityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B2282529B08CFE0014C7C0 /* UnityHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		04B2282129B08CB80014C7C0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				04B2282029B08CB80014C7C0 /* UnityFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		04B227A529B0814A0014C7C0 /* iOSUnity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUnity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B227A829B0814A0014C7C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,10 @@
 		04B227C529B0814C0014C7C0 /* iOSUnityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUnityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B227C929B0814C0014C7C0 /* iOSUnityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUnityUITests.swift; sourceTree = "<group>"; };
 		04B227CB29B0814C0014C7C0 /* iOSUnityUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUnityUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04B2281E29B08CB70014C7C0 /* UnityFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityFramework.framework; sourceTree = "<group>"; };
+		04B2282329B08CFD0014C7C0 /* iOSUnity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSUnity-Bridging-Header.h"; sourceTree = "<group>"; };
+		04B2282429B08CFE0014C7C0 /* UnityHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnityHelper.h; sourceTree = "<group>"; };
+		04B2282529B08CFE0014C7C0 /* UnityHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnityHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B2281F29B08CB80014C7C0 /* UnityFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +105,7 @@
 				04B227BE29B0814C0014C7C0 /* iOSUnityTests */,
 				04B227C829B0814C0014C7C0 /* iOSUnityUITests */,
 				04B227A629B0814A0014C7C0 /* Products */,
+				04B2281D29B08CB70014C7C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +122,7 @@
 		04B227A729B0814A0014C7C0 /* iOSUnity */ = {
 			isa = PBXGroup;
 			children = (
+				04B2282229B08CD10014C7C0 /* Unity */,
 				04B227A829B0814A0014C7C0 /* AppDelegate.swift */,
 				04B227AA29B0814A0014C7C0 /* SceneDelegate.swift */,
 				04B227AC29B0814A0014C7C0 /* ViewController.swift */,
@@ -127,6 +151,24 @@
 			path = iOSUnityUITests;
 			sourceTree = "<group>";
 		};
+		04B2281D29B08CB70014C7C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04B2281E29B08CB70014C7C0 /* UnityFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04B2282229B08CD10014C7C0 /* Unity */ = {
+			isa = PBXGroup;
+			children = (
+				04B2282429B08CFE0014C7C0 /* UnityHelper.h */,
+				04B2282529B08CFE0014C7C0 /* UnityHelper.m */,
+				04B2282329B08CFD0014C7C0 /* iOSUnity-Bridging-Header.h */,
+			);
+			path = Unity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +179,7 @@
 				04B227A129B0814A0014C7C0 /* Sources */,
 				04B227A229B0814A0014C7C0 /* Frameworks */,
 				04B227A329B0814A0014C7C0 /* Resources */,
+				04B2282129B08CB80014C7C0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +238,7 @@
 				TargetAttributes = {
 					04B227A429B0814A0014C7C0 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					04B227BA29B0814C0014C7C0 = {
 						CreatedOnToolsVersion = 14.2;
@@ -259,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B227AD29B0814A0014C7C0 /* ViewController.swift in Sources */,
+				04B2282629B08CFE0014C7C0 /* UnityHelper.m in Sources */,
 				04B227A929B0814A0014C7C0 /* AppDelegate.swift in Sources */,
 				04B227AB29B0814A0014C7C0 /* SceneDelegate.swift in Sources */,
 			);
@@ -435,9 +480,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VHS54767NW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSUnity/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -445,14 +495,17 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wu.iOSUnity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wu.MultiDisplayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSUnity/Unity/iOSUnity-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,9 +516,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VHS54767NW;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSUnity/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -473,14 +531,16 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.wu.iOSUnity;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wu.MultiDisplayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iOSUnity/Unity/iOSUnity-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
